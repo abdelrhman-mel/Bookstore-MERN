@@ -12,14 +12,8 @@ const app = express();
 //to read json body
 app.use(express.json());
 
-// using cors middleware
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    allowedHeaders: ["Content-Type"],
-    methods: ["GET", "POST", "DELETE", "PATCH"],
-  })
-);
+//using cors middleware
+app.use(cors());
 
 //connect to db
 mongoose
